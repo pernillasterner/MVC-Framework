@@ -1,15 +1,15 @@
 <?php
 
-class Pages
+class Pages extends Controller
 {
   public function __construct()
   {
-    echo 'Pages is loaded';
+    
   }
 
   public function index()
   {
-    echo 'Default method';
+   
   }
 
   public function about($id)
