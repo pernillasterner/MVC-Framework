@@ -1,0 +1,38 @@
+<?php
+/**
+ * PDO Database Class
+ * Connect to the database
+ * Create prepared statements
+ * Bind values
+ * Return rows and results
+ */
+class Database 
+{
+  private $host = DB_HOST;
+  private $user = DB_USER;
+  private $pass = DB_PASS;
+  private $dbname = DB_NAME;
+
+  // Database handler
+  private $dbh;
+  private $stmt;
+  private $error;
+
+  public function __construct()
+  {
+    // Set DSN
+    $dsn = 'mysql=host=' . $this->host . ';dbname=' . $this->dbname;
+    $options = array(
+      PDO::ATTR_PERSISTENT => true,
+      PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+    );
+
+    // Create a PDO instance
+    try{
+
+    } catch(PDOException $e) {
+      $this->error -> $e->getMessage();
+      echo $this->error;
+    }
+  }
+}
